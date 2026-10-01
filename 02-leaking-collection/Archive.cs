@@ -11,7 +11,11 @@ public class Archive
 
     public List<string> GetEntries()
     {
-        // DESIGNFEIL med vilje: denne lekker den interne listen.
-        return entries;
+        // Designfeil: Returnerer den interne listen, som kan endres av utenforstående kode.
+        //return entries;
+
+
+        // TODO del B: Fiks GetEntries() ved å returnere en kopi av listen i stedet for den interne listen.
+        return new List<string>(entries);
     }
 }

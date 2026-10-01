@@ -1,6 +1,9 @@
 List<int> readings = new List<int> { 12, 88, 41, 93, 55, 7, 24, 36 };
 
 // TODO: Kall PrintMatching minst tre ganger med ulike lambdas.
+PrintMatching(readings, value => value > 50); // Print values greater than 50
+PrintMatching(readings, value => value % 2 == 0); // Print even values
+PrintMatching(readings, value => value < 30); // Print values less than 30
 
 static void PrintMatching(List<int> values, Func<int, bool> condition)
 {

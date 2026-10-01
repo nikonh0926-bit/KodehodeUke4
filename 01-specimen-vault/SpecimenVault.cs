@@ -4,17 +4,30 @@ public class SpecimenVault
 
     public void Add(string specimen)
     {
-        // TODO
+        specimens.Add(specimen);
+        Console.WriteLine($"\nSpecimen '{specimen}' added to the vault.");
     }
 
     public bool Remove(string specimen)
     {
-        // TODO
+        foreach (var s in specimens)
+        {
+            if (s == specimen)
+            {
+                specimens.Remove(s);
+                return true;
+            }
+        }
+        Console.WriteLine($"\nSpecimen '{specimen}' not found in the vault.");
         return false;
     }
 
     public void PrintAll()
     {
-        // TODO
+        Console.WriteLine("\nSpecimens in the vault:");
+        foreach (var specimen in specimens)
+        {
+            Console.WriteLine(specimen);
+        }
     }
 }
